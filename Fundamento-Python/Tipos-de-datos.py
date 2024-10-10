@@ -75,7 +75,6 @@ fechanacimiento = "1 de enero del 2000"
 Nombre = "A l b e r t o"
 NOMBRE = "ALBERTO"
 
-
 # Notar que las variables 'nombre', 'Nombre' y 'NOMBRE', son distintas
 print()
 print("Las variables son sensibles a mayúsculas y minúsculas:")
