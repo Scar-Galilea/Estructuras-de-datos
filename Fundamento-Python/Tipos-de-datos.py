@@ -1,9 +1,16 @@
 #Galilea Peralta Contreras.
-#8 de octubre de 2024.
-#En este archivo solamente imprimirá el mensaje de "hola mundo" el cual se mostrará en pantalla.
+#11 de octubre de 2024.
+#Descripción:
+#Usos de los tipos básico de datos en Python.
 
-print("Hola Mundo")
-#Notas:
-# #La función print sirve para imprimir.
-#En Python ya no lleva punto y coma en los códigos.
-#Además en Python solo se necesita  la función print y ya no su biblioteca stdio.h.
+
+# Notas:
+"""
+En Python, no se requiere indicar el tipo de la variable en su declaración.
+Los valores básicos que pueden almacenar las variables son:
+- Int
+- Float
+- String (str)
+- Boolean. True o False (con inicial mayúscula).
+- None. Tipo especial que representa una ausencia de valor.
+"""
