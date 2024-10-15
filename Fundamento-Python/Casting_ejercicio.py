@@ -27,9 +27,9 @@ print(f"¿El valor de {Variable_3} es verdadero? {Es_verdadero}.")
 
 print()
 print("C) Convierta las siguientes cadenas a números: 10002, 100.02, 0.")
-Variable_1 = 10002
-Variable_2 = 100.02
-Variable_3 = 0
+Variable_1 = "10002"
+Variable_2 = "100.02"
+Variable_3 = "0"
 print(f"la cadena {Variable_1} se convierte en el  número {int(Variable_1)}.")
 print(f"la cadena {Variable_2} se convierte en el número {float(Variable_2)}.")
 print(f"la cadena {Variable_3} se convierte en el número{int(Variable_3)}.")
@@ -43,4 +43,6 @@ Es_verdadero = bool(Variable_2)
 print(f"¿El valor de {Variable_2} es verdadero? {Es_verdadero}.")
 Es_verdadero = bool(Variable_3)
 print(f"¿El valor de {Variable_3} es verdadero? {Es_verdadero}.")
-#El 0 representa la ausencia de valor o una condición falsa, mientras que cualquier otro valor distinto de cero se interpreta como verdadero.
+#El 0 representa un carácter, lo que lo hace diferente al 0 en número.
+#La cadena "0" no está vacía, contiene un carácter (el dígito "0").
+#Cuando la cadena está vacía es falso, pero este caso no lo está.
