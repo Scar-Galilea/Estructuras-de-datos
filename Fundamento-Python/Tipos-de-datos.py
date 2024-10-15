@@ -24,7 +24,6 @@ print("Tipo de dato entero:",mi_variable_entera)
 mi_variable_decimal = 43
 print("Tipo de dato decimal:", mi_variable_decimal)
 
-
 # Cadena de texto:
 mi_variable_texto_nombre = "Galilea"
 mi_variable_texto_apellido = 'Peralta'
