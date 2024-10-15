@@ -41,6 +41,7 @@ Es_verdadero = bool(Variable_1)
 print(f"¿El valor de {Variable_1} es verdadero? {Es_verdadero}.")
 Es_verdadero = bool(Variable_2)
 print(f"¿El valor de {Variable_2} es verdadero? {Es_verdadero}.")
+
 Es_verdadero = bool(Variable_3)
 print(f"¿El valor de {Variable_3} es verdadero? {Es_verdadero}.")
 #El 0 representa un carácter, lo que lo hace diferente al 0 en número.
