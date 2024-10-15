@@ -3,10 +3,44 @@
 #Descripción:
 #Conversión de tipos de datos (casting) en Python.
 
-#Convierta los siguientes números en cadenas: 3.14159265, 12, 0.
-Variable_float = 3.14159265
-Variable_int = 12
-Variable_2_int = 0
+print("Realiza un programa de nombre Casting_ejercicio.py que realice lo siguiente:")
 
-print("Conversión de número a cadena.")
-print(f"Los números {Variable_float} , {Variable_int} y {Variable_2_int} se convierten a cadena: {str(Variable_float)},{str(Variable_int} y .")
+print()
+print("A)Convierta los siguientes números en cadenas: 3.14159265, 12, 0.")
+#Llenar datos
+Variable_1 = 3.14159265
+Variable_2 = 12
+Variable_3 = 0
+#Imprimir datos y convertir los numeros a cadenas
+print(f"El número {Variable_1} se convierten a cadena: {str(Variable_1)}.")
+print(f"El número {Variable_2} se convierten a cadena: {str(Variable_2)}.")
+print(f"El número {Variable_3} se convierten a cadena: {str(Variable_3)}.")
+
+print()
+print("B) De los números anteriores, indica su valor booleano.")
+Es_verdadero = bool(Variable_1)
+print(f"¿El valor de {Variable_1} es verdadero? {Es_verdadero}.")
+Es_verdadero = bool(Variable_2)
+print(f"¿El valor de {Variable_2} es verdadero? {Es_verdadero}.")
+Es_verdadero = bool(Variable_3)
+print(f"¿El valor de {Variable_3} es verdadero? {Es_verdadero}.")
+
+print()
+print("C) Convierta las siguientes cadenas a números: 10002, 100.02, 0.")
+Variable_1 = 10002
+Variable_2 = 100.02
+Variable_3 = 0
+print(f"la cadena {Variable_1} se convierte en el  número {int(Variable_1)}.")
+print(f"la cadena {Variable_2} se convierte en el número {float(Variable_2)}.")
+print(f"la cadena {Variable_3} se convierte en el número{int(Variable_3)}.")
+
+print()
+print("D) De las cadenas anteriores, indica su valor booleano. Nota: especificar por qué el resultado de la cadena 0.")
+
+Es_verdadero = bool(Variable_1)
+print(f"¿El valor de {Variable_1} es verdadero? {Es_verdadero}.")
+Es_verdadero = bool(Variable_2)
+print(f"¿El valor de {Variable_2} es verdadero? {Es_verdadero}.")
+Es_verdadero = bool(Variable_3)
+print(f"¿El valor de {Variable_3} es verdadero? {Es_verdadero}.")
+#El 0 representa la ausencia de valor o una condición falsa, mientras que cualquier otro valor distinto de cero se interpreta como verdadero.
