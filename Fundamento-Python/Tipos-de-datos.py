@@ -46,7 +46,6 @@ Se utiliza una convención de colocar las variables en mayúsculas y no modifica
 VARIABLE_CONSTANTE = 3.1416
 print("Ejemplo de convención de una constante:", VARIABLE_CONSTANTE)
 
-
 #Notas:
 #Para poder identificar el tipo de mis variables  el nombre de la variable debe de usar nombres de variables descriptivos y claros.
 #En Python en mi opinión, se facilita el uso de variables.
