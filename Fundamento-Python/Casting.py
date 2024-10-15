@@ -79,6 +79,5 @@ print(f"¿El valor de {var_cadena} es verdadero? {es_verdadero}.")
 # - El valor None
 # Todos los demás valores, como números no nulos o cadenas no vacías, se convierten a True.
 
-Notas:
+#Notas:
 # En Python, las funciones int(), float(), str() y bool() se utilizan comúnmente para realizar estas conversiones.
-
