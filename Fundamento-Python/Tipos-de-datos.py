@@ -18,10 +18,12 @@ Los valores básicos que pueden almacenar las variables son:
 # Número entero:
 mi_variable_entera = -777
 print("Tipo de dato entero:",mi_variable_entera)
+#Almacena números positivos o negativos, sin parte decimal.
 
 # Número decimal:
 mi_variable_decimal = 43
 print("Tipo de dato decimal:", mi_variable_decimal)
+
 
 # Cadena de texto:
 mi_variable_texto_nombre = "Galilea"
@@ -35,6 +37,7 @@ print('Tipo booleano:', mi_variable_booleana)
 # None:
 mi_variable_none = None
 print("Tipo none:",mi_variable_none)
+#Tipo especial para representar una variable que aún no tiene valor asignado.
 
 # Uso de constantes.
 '''
@@ -44,7 +47,8 @@ Se utiliza una convención de colocar las variables en mayúsculas y no modifica
 VARIABLE_CONSTANTE = 3.1416
 print("Ejemplo de convención de una constante:", VARIABLE_CONSTANTE)
 
+
 #Notas:
-#Para poder identificar el tipo de mis variables entendí que el nombre de la variable debe de ser mas concreto.
+#Para poder identificar el tipo de mis variables  el nombre de la variable debe de usar nombres de variables descriptivos y claros.
 #En Python en mi opinión, se facilita el uso de variables.
 #La variable None es refencia a NULL de C++.
