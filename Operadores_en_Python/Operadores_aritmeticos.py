@@ -13,6 +13,6 @@ print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 + 
 print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 - Variable_2}")
 print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 * Variable_2}")
 print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 / Variable_2:.2f}")
-print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 % Variable_2}")
+print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 ** Variable_2}")
 print(f"El numero {Variable_1} con {Variable_2} da como resultado {Variable_1 // Variable_2}")
 
