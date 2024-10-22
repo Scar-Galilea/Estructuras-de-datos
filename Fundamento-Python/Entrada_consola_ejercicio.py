@@ -1,8 +1,9 @@
 #Galilea Peralta Contreras.
 #14 de octubre de 2024.
 #Descripción:
-#Escribe un programa de nombre Entrada_consola_ejercicio.py que realice lo siguiente:
+#Ejercicios.
 
+#Escribe un programa de nombre Entrada_consola_ejercicio.py que realice lo siguiente:
 #a) Pida 2 números decimales por consola al usuario utilizando la función input.
 Variable_1 = input("Ingrese un número decimal: ")
 Variable_2 = input("Ingrese un número decimal: ")

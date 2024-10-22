@@ -1,7 +1,7 @@
 #Galilea Peralta Contreras.
 #11 de octubre de 2024.
 #Descripción:
-#Ejercicio
+#Ejercicio.
 
 #Rellenar datos.
 Día = "lunes"
