@@ -11,13 +11,15 @@
 #d) Si ambas cadenas son iguales a las cadenas declaradas internamente, entonces el usario se autenticó correctamente.
 #e) Muestre el resultado en consola como valor booleano (True/False).
 
-#Nota: Las cadenas no tiene que ser convertidas a minúsculas.
+#Nota: Las cadenas no tienen que ser convertidas a minúsculas.
 
 print("*** Sistema de autentificación ***")
 Variable_1 = input("Ingresa tu usuario: ")
-Variable_2 = input("Ingrese tu contraseña: ")
+Variable_2 = input("Ingresa tu contraseña: ")
 
+# Declaración de usuario y contraseña válidos.
 Variable_1 = Variable_1 == "Alumnos"
 Variable_2 = Variable_2 == "Python"
 
+# Verificar si el usuario y la contraseña ingresados coinciden con los valores correctos
 print(f"El acceso es correcto? {Variable_1 and Variable_2}")

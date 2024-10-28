@@ -13,7 +13,9 @@
 print("*** Comunidad de la UNSIJ ***")
 Variable_1 = input("¿Es profesor de la UNSIJ? ")
 Variable_2 = input("Es estudiante de la UNSIJ? ")
+
 Expresión_1 = Expresión_1.lower()=="si"
 Expresión_2 = Expresión_2.lower()=="si"
 
+# Imprimimos el resultado final: será True si cumple alguna de las condiciones (profesor o estudiante).
 print(f"¿Formas parte de la comunidad  UNSIJ? {Variable_1 or Variable_2}")

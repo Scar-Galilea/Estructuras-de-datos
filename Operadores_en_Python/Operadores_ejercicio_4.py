@@ -12,14 +12,17 @@
 
 print("*** Expresión booleana (exp1) o (exp2) y (exp3) o (exp4) ***")
 
+# Solicitar los valores booleanos al usuario. La entrada es "V" para True o "F" para False.
 Expresión_1 = input("Ingrese valor booleano (V/F): ")
 Expresión_2 = input("Ingrese valor booleano (V/F): ")
 Expresión_3 = input("Ingrese valor booleano (V/F): ")
 Expresión_4 = input("Ingrese valor booleano (V/F): ")
 
+# Convertir las entradas a booleanos. "V" se convierte en True y "F" en False.
 Expresión_1 = Expresión_1.lower() == "v"
 Expresión_2 = Expresión_2.lower() == "v"
 Expresión_3 = Expresión_3.lower() == "v"
 Expresión_4 = Expresión_4.lower() == "v"
 
+# Evaluar la expresión booleana: (exp1 OR exp2) AND (exp3 OR exp4)
 print(f"El resultado de la expresión booleana es: {(Expresión_1 or Expresión_2) and (Expresión_3 or Expresión_4) }")

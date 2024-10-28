@@ -9,7 +9,7 @@ Estos operadores nos permiten realizar operaciones lógicas como "y", "o" y "no"
 decisiones más sofisticadas dentro de nuestros programas.
 """
 
-# Se solicita por consola que se ingresen dos valores (Si/No) para covnertirlas a expresiones booleanas.
+# Se solicita por consola que se ingresen dos valores (Si/No) para convertirlas a expresiones booleanas.
 Expresión_1= input("Ingrese un si o no: ")
 Expresión_2= input("Ingrese un si o no: ")
 
