@@ -1,9 +1,23 @@
 #Galilea Peralta Contreras.
-#16 de octubre de 2024.
+#28 de octubre de 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python.
+#Sistema de autentificación.
 
-Variable_1 = input("Ingrese número: ")
-Variable_1 = float(Variable_1)
+#Escribe un programa de nombre Operadores_ejercicio3.py que realice lo siguiente:
+#Este programa determinará si un usuario se autentifica correctamente con su usuario y contraseña. Para ello:
+#a) Internamente declare dos cadenas constantes, una para el usuario y otra para la contraseña.
+#b) Pida al usuario una cadena con el usuario.
+#c) Pida al usuario una cadena con la contraseña.
+#d) Si ambas cadenas son iguales a las cadenas declaradas internamente, entonces el usario se autenticó correctamente.
+#e) Muestre el resultado en consola como valor booleano (True/False).
 
-print(f"El número {Variable_1} esta entre 10 y 15? {Variable_1 >= 10 and Variable_1 <=15}")
+#Nota: Las cadenas no tiene que ser convertidas a minúsculas.
+
+print("*** Sistema de autentificación ***")
+Variable_1 = input("Ingresa tu usuario: ")
+Variable_2 = input("Ingrese tu contraseña: ")
+
+Variable_1 = Variable_1 == "Alumnos"
+Variable_2 = Variable_2 == "Python"
+
+print(f"El acceso es correcto? {Variable_1 and Variable_2}")
