@@ -22,7 +22,7 @@ else:
 # Ejemplo en donde se determina si un número es par o impar.
 print("*** Programa que determina si un número es par o impar +++")
 
-# Solicitamos el número.
+#Solicitamos el número.
 Variable_1 = input("Ingresa un número: ")
 Variable_1 = int(Variable_1)
 
