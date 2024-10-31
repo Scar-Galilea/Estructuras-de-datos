@@ -18,7 +18,7 @@ while Contador_1 != 0:
     if Variable_1 != 0:
         if Variable_1 == 1:
             print()
-            print(f"Su saldo es de: ${Saldo}")
+            print(f"Su saldo es de: ${Saldo : .2f}")
             print()
         elif Variable_1 == 2:
             Variable_2 = float(input("Ingrese la cantidad: "))
