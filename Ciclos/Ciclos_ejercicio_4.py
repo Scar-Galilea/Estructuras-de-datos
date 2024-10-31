@@ -15,25 +15,25 @@ while Contador_1 != 0:
     Variable_1 = int(input("Ingresa una opción: "))
     Contador_1 = Variable_1
 
-    if Variable_1 == 1:
-        print()
-        print(f"Su saldo es de: ${Saldo}")
-        print()
-    elif Variable_1 == 2:
-        Variable_2 = float(input("Ingrese la cantidad: "))
-        Saldo =  Saldo + Variable_2
-        print("Se ingreso su saldo exitosamente")
-        print()
-    elif Variable_1 == 3:
-        Variable_2 = float(input("Ingrese la cantidad que se va a retirar: "))
-        if Variable_2 < Saldo:
-            Saldo = Saldo - Variable_2
-            print("Se retiro su saldo exitosamente")
+    if Variable_1 != 0:
+        if Variable_1 == 1:
+            print()
+            print(f"Su saldo es de: ${Saldo}")
+            print()
+        elif Variable_1 == 2:
+            Variable_2 = float(input("Ingrese la cantidad: "))
+            Saldo =  Saldo + Variable_2
+            print("Se ingreso su saldo exitosamente")
+            print()
+        elif Variable_1 == 3:
+            Variable_2 = float(input("Ingrese la cantidad que se va a retirar: "))
+            if Variable_2 < Saldo:
+                Saldo = Saldo - Variable_2
+                print("Se retiro su saldo exitosamente")
+            else:
+                print("No se pudo completar esta operación")
+            print()
         else:
-            print("No se pudo completar esta operación")
-        print()
-    else:
-        if Variable_1 != 0:
             print()
             print("Opción incorrecta")
             print()
