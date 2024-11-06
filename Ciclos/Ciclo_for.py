@@ -27,5 +27,5 @@ for alumno in alumnos:
     print(f"Hola {alumno}.")
 
 for i in range (1,10):
-    print(i)
+    prinyhyt(i)
 
