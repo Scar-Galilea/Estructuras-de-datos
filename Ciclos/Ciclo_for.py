@@ -1,8 +1,4 @@
-#Galilea Peralta Contreras.
-#06 de noviembre de 2024.
-#Descripción:
-#Usos de los tipos básico de datos en Python.
-#Para poder usar el ciclo while se utiliza de la siguiente manera (falta mas).
+
 
 """
 sixtansis
@@ -27,5 +23,5 @@ for alumno in alumnos:
     print(f"Hola {alumno}.")
 
 for i in range (1,10):
-    prinyhyt(i)
+    print(i)
 
