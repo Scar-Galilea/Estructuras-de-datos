@@ -9,14 +9,18 @@ Numero_de_filas = int(input("Ingrese el número de filas: "))
 for j in range (1,Numero_de_filas + 1):
     asteriscos = "*" * j
     print(f"{asteriscos}")
-    j += 1
 
 print()
 
+contador = Numero_de_filas
 for i in range (1,Numero_de_filas + 1):
-    i = Numero_de_filas
-    asteriscos = "*" * i
+    asteriscos = "*" * contador
     print(f"{asteriscos}")
-    i -= 1
+    contador -= 1
+contador = Numero_de_filas
+for i in range (1,Numero_de_filas + 1):
+    asteriscos = "*" * contador
+    print(f"{asteriscos}")
+    contador -= 1
 
 
