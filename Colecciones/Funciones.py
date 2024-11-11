@@ -16,6 +16,8 @@ def Menu():
     print("3) Multiplicación")
     print("4) División")
     print("5) División entera")
+    print("6) Módulo")
+    print("7) Potenciación")
     print()
     Opcion = int(input("Ingrese la opcion: "))
     return Opcion
@@ -23,22 +25,25 @@ def Menu():
 def Calculadora (Opcion,Numero_1,Numero_2):
     if Opcion == 1:
         print()
-        print("Suma:")
         Resultado = Numero_1 + Numero_2
     elif Opcion == 2:
         print()
-        print("Resta:")
         Resultado = Numero_1 - Numero_2
     elif Opcion == 3:
         print()
-        print("Multiplicación:")
         Resultado = Numero_1 * Numero_2
     elif Opcion == 4:
-        print("División:")
         Resultado = Numero_1 / Numero_2
+        print()
     elif Opcion == 5:
-        print("División entera:")
         Resultado = Numero_1 // Numero_2
+        print()
+    elif Opcion == 6:
+        Resultado = Numero_1 % Numero_2
+        print()
+    elif Opcion == 7:
+        Resultado = Numero_1 ** Numero_2
+        print()
     else:
         print()
         print("Opción incorrecta")
