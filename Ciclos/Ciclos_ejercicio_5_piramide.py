@@ -17,10 +17,23 @@ for i in range (1,Numero_de_filas + 1):
     asteriscos = "*" * contador
     print(f"{asteriscos}")
     contador -= 1
+
+print()
 contador = Numero_de_filas
-for i in range (1,Numero_de_filas + 1):
+for k in range (1,Numero_de_filas + 1):
+    espacio = " " * k
     asteriscos = "*" * contador
-    print(f"{asteriscos}")
+    print(f"{espacio}{asteriscos}")
     contador -= 1
+
+print()
+contador = Numero_de_filas
+contador_2 = 0
+for m in range (1,Numero_de_filas + 1):
+    espacio = " " * contador
+    asteriscos = "*" * (m + contador_2)
+    print(f"{espacio}{asteriscos}")
+    contador -= 1
+    contador_2 += 1
 
 
