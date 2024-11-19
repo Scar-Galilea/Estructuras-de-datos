@@ -2,16 +2,18 @@
 #13 de noviembre del 2024.
 #Descripción:
 #Usos de los tipos básico de datos en Python
+
 Estructura_de_datos = []
 Derecho = []
 Contabilidad = []
 Algebra = []
 Electronica = []
-Calificaciones = [Estructura_de_datos, Derecho, Contabilidad, Algebra, Electronica]
+Ingles = []
+Calificaciones = [Estructura_de_datos, Derecho, Contabilidad, Algebra, Electronica,Ingles]
 Posicion = 0
-Contador_1 = 1
+Opcion = 1
 
-while Contador_1 != 0:
+while Opcion != 0:
     print("*** Promedios del Parcial 1**+")
     print()
     print("0) Salir")
@@ -21,53 +23,72 @@ while Contador_1 != 0:
     print("4) Eliminar alumno")
     print("5) Ver promedio grupal")
     print()
-    Contador_1 = int(input("Ingresa una opción: "))
-    if Contador_1  != 0:
-        if Contador_1  == 1:
-            print()
-            for Calificacion in Calificaciones:
-                print(f" {Calificacion}")
-            print()
-        elif Contador_1 == 2:
-            print()
-            for Calificacion in Calificaciones:
-                print(f" {Calificacion}")
-            print()
-        elif Contador_1  == 3:
-            print()
-            print("Ingrese las calificaciones del alumno")
-            Estructura_añadido = float(input("Estructuras de datos: "))
-            Derecho_añadido = float(input("Derecho: "))
-            Contabilidad_añadido = float(input("Contabilidad: "))
-            Algebra_añadido = float(input("Algebra: "))
-            Electronica_añadido = float(input("Electronica: "))
-
-            Calificaciones[0].append(Estructura_añadido)
-            Calificaciones[1].append(Derecho_añadido)
-            Calificaciones[2].append(Contabilidad_añadido)
-            Calificaciones[3].append(Algebra_añadido)
-            Calificaciones[4].append(Electronica_añadido)
-
-            Posición = +1
-            print()
-        elif Contador_1  == 4:
-            Eliminar_producto = input("Ingrese el producto que desea eliminar: ")
-            Numero_de_producto = 0
-
-            while Productos[Numero_de_producto] != Eliminar_producto:
-                Numero_de_producto += 1
-
-            Productos.remove(Eliminar_producto)
-            del Cantidades[Numero_de_producto]
-        elif Contador_1 == 5:
-            Numero = 0
-            for Producto in Productos:
-                print(f"{Cantidades[Numero]}- {Producto}")
-                Numero += 1
-
+    Opcion = int(input("Ingresa una opción: "))
+    if Opcion  == 0:
+        print("Fin de programa")
+    elif Opcion  == 1:
+        print()
+        if len(Estructura_de_datos) != 0:
+             Numero_de_alumno = int(input("Ingrese el numero del alumno que deseas ver: "))
+             print("Calificacion del alumno ",Numero_de_alumno)
+             print(f" Estructura de datos: {Estructura_de_datos[Numero_de_alumno]}.")
+             print(f" Derecho: {Derecho[Numero_de_alumno]}.")
+             print(f" Contabilidad: {Contabilidad[Numero_de_alumno]}.")
+             print(f" Electronica: {Electronica[Numero_de_alumno]}.")
+             print(f" Ingles: {Ingles[Numero_de_alumno]}.")
+             print()
         else:
-            print()
-            print("Opción incorrecta")
-            print()
+            print("No hay alumnos por ver")
+    elif Opcion == 2:
+        print()
+        if len(Estructura_de_datos) != 0:
+            for Calificacion in Calificaciones:
+                print(f" {Calificacion}")
+        else:
+            print("No hay alumnos por ver")
+        print()
+
+    elif Opcion  == 3:
+        print()
+        print("Ingrese las calificaciones del alumno")
+        Estructura_añadido = float(input("Estructuras de datos: "))
+        Derecho_añadido = float(input("Derecho: "))
+        Contabilidad_añadido = float(input("Contabilidad: "))
+        Algebra_añadido = float(input("Algebra: "))
+        Electronica_añadido = float(input("Electronica: "))
+        Ingles_añadido = float(input("Ingles: "))
+
+        Calificaciones[0].append(Estructura_añadido)
+        Calificaciones[1].append(Derecho_añadido)
+        Calificaciones[2].append(Contabilidad_añadido)
+        Calificaciones[3].append(Algebra_añadido)
+        Calificaciones[4].append(Electronica_añadido)
+        Calificaciones[5].append(Ingles_añadido)
+
+        print()
+    elif Opcion  == 4:
+        Eliminar_de_alumno = int(input("Ingrese el numero del alumno que deseas eliminar: "))
+        del Estructura_de_datos[Eliminar_de_alumno]
+        del Derecho[Eliminar_de_alumno]
+        del Contabilidad[Eliminar_de_alumno]
+        del Algebra[Eliminar_de_alumno]
+        del Electronica [Eliminar_de_alumno]
+        del Ingles[Eliminar_de_alumno]
+
+    elif Opcion == 5:
+        #Con una materia ya se sabe cuantos alumnos hay
+        Numero_de_alumnos = len(Estructura_de_datos)
+        Contador = 0
+        Promedio_de_un_alumno = 0
+        Total = 0
+        while Contador < Numero_de_alumno:
+            #Si fuera la otra forma de lista , se podria utilizar la funcion sum
+            Promedio_de_un_alumno = (Estructura_de_datos[Contador] + Derecho[Contador] + Contabilidad[Contador] + Algebra[Contador] + Electronica[Contador] + Ingles[Contador])/6
+            Total = Total + Promedio_de_un_alumno
+        Total = Total / Numero_de_alumnos
+    else:
+        print()
+        print("Opción incorrecta")
+        print()
 print()
 print("Salio del programa")
