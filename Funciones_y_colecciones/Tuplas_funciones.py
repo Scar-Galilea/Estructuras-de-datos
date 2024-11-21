@@ -11,7 +11,15 @@ def Promedio (calificaciones):
 
 print("*** Calificaciones del parcial ***")
 print()
-calificaciones = (9,8,7,3)
+# Se solicitan las calificaciones de los parciales y ordinario.
+parcial1 = float(input("Ingresa la calificación del Parcial 1: "))
+parcial2 = float(input("Ingresa la calificación del Parcial 2: "))
+parcial3 = float(input("Ingresa la calificación del Parcial 3: "))
+ordinario = float(input("Ingresa la calificación del Ordinario: "))
+print()
+
+# Se crea una tupla
+calificaciones = (parcial1, parcial2, parcial3, ordinario)
 promedio_parcial,promedio_final = Promedio(calificaciones)
 
 print("Calificacion del parcial es: ",promedio_parcial)
