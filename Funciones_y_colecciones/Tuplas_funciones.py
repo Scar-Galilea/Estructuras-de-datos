@@ -4,14 +4,14 @@
 #Usos de los tipos básico de datos en Python
 
 def Promedio (calificaciones):
-    promedio_parcial = sum(calificaciones[0:2]) * 0.5
-    promedio_final = calificaciones[3] * 0.5 + promedio_parcial
+    promedio_parcial = (sum(calificaciones[0:3]))/3
+    promedio_final = calificaciones[3] * 0.5 + promedio_parcial * 0.5
 
     return promedio_parcial,promedio_final
 
 print("*** Calificaciones del parcial ***")
 print()
-calificaciones = (6,7,8,7)
+calificaciones = (9,8,7,3)
 promedio_parcial,promedio_final = Promedio(calificaciones)
 
 print("Calificacion del parcial es: ",promedio_parcial)
