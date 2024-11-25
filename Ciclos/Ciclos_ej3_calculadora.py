@@ -34,7 +34,7 @@ while Opcion != 0:
     print()
     Opcion = int(input("Ingresa una opción: "))
 
-    if Opcion != 0:
+    if Opcion == 0:
         print()
         print("Fin del programa.")
     elif Opcion == 1:
