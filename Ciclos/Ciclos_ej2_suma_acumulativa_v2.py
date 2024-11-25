@@ -13,20 +13,21 @@ a) Solicite al usuario los números inicial y final de la suma acumulativa.
 b) Calcule la suma acumulativa entre ambos números.
 c) Muestre el resultado de la suma.
 """
-print("*** Programa que calcula la suma acumulativa entre dos números **+")
-Variable_1 = input("Ingrese el número inicial de la cuenta: ")
-Variable_2 = input("Ingrese el número final de la cuenta: ")
+print("*** Programa que calcula la suma acumulativa entre dos números. **+")
+Numero_inicial = input("Ingrese el número inicial de la cuenta: ")
+Numero_final = input("Ingrese el número final de la cuenta: ")
 
-Variable_1 = int(Variable_1)
-Variable_2 = int(Variable_2)
+Numero_inicial = int(Numero_inicial)
+Numero_final = int(Numero_final)
 
-Contador_1 = Variable_1
+Contador_1 = Numero_inicial
 Total = 0
 
-while Contador_1 <= Variable_2 :
+while Contador_1 <= Numero_final :
     Total += Contador_1
     Contador_1 += 1
+
 print()
-print(f"La suma del {Variable_1} al {Variable_2} son: {Total}")
+print(f"La suma del {Numero_inicial} al {Numero_final} son: {Total}.")
 
 
