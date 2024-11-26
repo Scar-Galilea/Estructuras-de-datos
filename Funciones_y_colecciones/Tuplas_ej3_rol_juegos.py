@@ -12,14 +12,14 @@ b) El movimiento de las jornadas será al contrario de las manecillas del reloj.
 c) La jornada 1 no se moverá en ningún caso.
 """
 
-# Inicialización de las jornadas
+# Inicialización de las jornadas.
 Equipo_1 = ["Jornada 1", "Jornada 2", "Jornada 3", "Jornada 4"]
 Equipo_2 = ["Jornada 5", "Jornada 6", "Jornada 7", "Jornada 8"]
 
 
 Auxiliar = None
 Grupo = 1
-#Mostrar los Grupos de jornadas.
+#Mostrar los grupos de jornadas.
 while Grupo <= 7:
     Contador = 0
     print(f"Grupo {Grupo}:")
@@ -31,7 +31,7 @@ while Grupo <= 7:
     print("_______________________________________________")
 
     #Notas:
-    # Para hallar la solución del programa, realicé varias pruebas, en donde me di cuenta de que el uso de las funciones pop y insert son más complejos de lo que había entendido primeramente.
+    #Para hallar la solución del programa, se realizó varias pruebas, en donde se usaron las funciones pop e insert las cuales fueron muy útiles pero complejas.
 
     """
     Otra forma en las cuales se hacen los movimientos de las jornadas:
@@ -50,7 +50,7 @@ while Grupo <= 7:
 
     #Realizar el movimiento de las jornadas al contrario de las manecillas del reloj.
     #Jornada 1 permanece fija, rotamos los demás elementos.
-    #Movimiento en Equipo 1 y Equipo 2
+    #Movimiento en Equipo_1 y Equipo _2.
     #La función insert puedes insertar un único elemento en una lista de Python existente.
     #La función pop elimina y devuelve un elemento de una lista.
     Equipo_1.insert(1, Equipo_2.pop(0))  #Insertar el primer elemento de Equipo_2 en la segunda posición de Equipo_1.
