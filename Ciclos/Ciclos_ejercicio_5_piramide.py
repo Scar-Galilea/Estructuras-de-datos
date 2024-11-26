@@ -1,6 +1,7 @@
 #Galilea Peralta Contreras.
 #07 de noviembre de 2024.
 #Descripción:
+#Este programa imprime una pirámide de caracteres '*' en cuatro formas diferentes según la cantidad de filas.
 
 """
 Escribe un programa de nombre Ciclos_ej5_piramide.py que realice lo siguiente:
@@ -30,7 +31,7 @@ a) Solicite el número de filas de la pirámide.
 b) Muestre los tres tipos de pirámides utilizando la lógica adecuada.
 
 """
-
+#Solicitar al usuario el número de filas para las pirámides.
 Numero_de_filas = int(input("Ingrese el número de filas: "))
 
 print()
