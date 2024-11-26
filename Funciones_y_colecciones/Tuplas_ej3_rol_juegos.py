@@ -30,8 +30,12 @@ while Grupo <= 7:
         Contador += 1
     print("_______________________________________________")
 
+    #Notas:
+    # Para hallar la solución del programa, realicé varias pruebas, en donde me di cuenta de que el uso de las funciones pop y insert son más complejos de lo que había entendido primeramente.
+
     """
-    Otra forma en las cuales se hacen los movimientos de las jornadas.
+    Otra forma en las cuales se hacen los movimientos de las jornadas:
+    
     Auxiliar = Equipo_2[1]
     Auxiliar_2 = Equipo_2[2]
     Auxiliar_3 = Equipo_2[3]
@@ -47,6 +51,8 @@ while Grupo <= 7:
     #Realizar el movimiento de las jornadas al contrario de las manecillas del reloj.
     #Jornada 1 permanece fija, rotamos los demás elementos.
     #Movimiento en Equipo 1 y Equipo 2
+    #La función insert puedes insertar un único elemento en una lista de Python existente.
+    #La función pop elimina y devuelve un elemento de una lista.
     Equipo_1.insert(1, Equipo_2.pop(0))  #Insertar el primer elemento de Equipo_2 en la segunda posición de Equipo_1.
     Equipo_2.append(Equipo_1.pop(-1))  #Mover el último elemento de Equipo_1 al final de Equipo_2.
 
