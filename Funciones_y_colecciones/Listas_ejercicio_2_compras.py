@@ -2,16 +2,31 @@
 #13 de noviembre del 2024.
 #Descripción:
 #Usos de los tipos básico de datos en Python
+"""
+Escribe un programa de nombre Listas_ej2_compras.py que realice lo siguiente:
+Este programa es una lista de compras para el súper. La lista está conformado por varios productos. Cada producto tiene un nombre y cantidad, por lo que también se sugiere utilizar una lista.
+Se debe mostrar el siguiente menú:
+   ***  Lista de compras para el súper  ***
+1) Ver lista de productos.
+2) Añadir producto a la lista.
+3) Eliminar producto de la lista.
+0) Salir.
+
+Cualquier otro caso -> Opción no válida.
+Para ello:
+a) Utilice funciones para modular el código.
+b) Utilice una lista para los productos a añadir, en donde también se sugiere utilizar una lista para los productos, es decir, se va a utilizar una lista de listas.
+"""
 def Menu():
-    print("*** Listas de compras**+")
+    print("*** Lista de compras para el súper. **+")
     print()
-    print("0) Salir")
-    print("1) Ver lista")
-    print("2) Añadir producto a la lista")
-    print("3) Eliminar producto de la lista")
+    print("0) Salir.")
+    print("1) Ver lista.")
+    print("2) Añadir producto a la lista.")
+    print("3) Eliminar producto de la lista.")
     print()
 
-    Opcion = int(input("Ingrese la opcion: "))
+    Opcion = int(input("Ingrese la opción: "))
     return Opcion
 
 
@@ -51,12 +66,10 @@ while Opcion != 0:
             Productos.remove(Eliminar_producto)
             del Cantidades[Numero_de_producto]
         else:
-            print("No hay compras por eliminar")
+            print("No hay compras por eliminar.")
             print()
 
     else:
         print()
-        print("Opción incorrecta")
+        print("Opción incorrecta.")
         print()
-print()
-print("Salio del programa")
