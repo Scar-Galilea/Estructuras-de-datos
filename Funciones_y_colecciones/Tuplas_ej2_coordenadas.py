@@ -1,7 +1,7 @@
 #Galilea Peralta Contreras.
 #25 de noviembre del 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python
+#Este programa almacena diversos puntos como coordenadas y permite obtener la ecuación de la recta entre dos de los puntos.
 """
 Escribe un programa de nombre Tuplas_ej2_coordenadas.py que realice lo siguiente:
 Este programa almacena diversos puntos como coordenadas y permite obtener la ecuación de la recta entre dos de los puntos.
@@ -19,7 +19,7 @@ a) Utilice funciones para modular el código.
 b) Utilice una tupla para almacenar las coordenadas (x,y) del punto.
 c) Utilice una lista para almacenar las tuplas de las coordenadas.
 """
-
+#Función para mostrar el menú y devolver la opción seleccionada.
 def Menu():
     print("***  Rectas a partir de puntos (coordenadas) en el plano cartesiano  ***")
     print()
@@ -33,6 +33,7 @@ def Menu():
     Opcion = int(input("Ingrese la opción: "))
     return Opcion
 
+# Lista para almacenar las coordenadas como tuplas (x, y)
 Lista_de_cordenadas = []
 Opcion =n= None
 
@@ -41,7 +42,7 @@ while Opcion != 0:
     if Opcion == 0:
         print()
         print("Fin del programa.")
-    elif Opcion == 1:
+    elif Opcion == 1:  #Ver las coordenadas almacenadas.
         print()
         if len(Lista_de_cordenadas) != 0:
             Numero = 1
@@ -52,16 +53,16 @@ while Opcion != 0:
             print("No hay coordenadas por ver")
         print("______________________________________________________")
         print()
-    elif Opcion  == 2:
+    elif Opcion  == 2:  #Agregar una nueva coordenada.
         print()
         X = float(input("Ingrese la coordenada x: "))
         Y = float(input("Ingrese la coordenada y: "))
-        Tupla_de_coordenadas = (X,Y)
+        Tupla_de_coordenadas = (X,Y) #Crear la tupla de coordenadas.
         Lista_de_cordenadas.append(Tupla_de_coordenadas)
         print(F"Se agrego con exito las cordenadas {X:.1f} y {Y:.1f}.")
         print("______________________________________________________")
         print()
-    elif Opcion == 3:
+    elif Opcion == 3:  #Calcular la pendiente y la ecuación de la recta entre dos coordenadas.
         if len(Lista_de_cordenadas) != 0:
             Numero = 1
             for Lista_de_cordenada in Lista_de_cordenadas:

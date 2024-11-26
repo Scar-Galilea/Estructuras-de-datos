@@ -1,7 +1,8 @@
 #Galilea Peralta Contreras.
 #25 de noviembre del 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python
+#Este programa imprime una pirámide de caracteres '*' en cuatro formas diferentes según la cantidad de filas.
+
 
 """
 Escribe un programa de nombre Funciones_ej2_piramide.py que realice lo siguiente:

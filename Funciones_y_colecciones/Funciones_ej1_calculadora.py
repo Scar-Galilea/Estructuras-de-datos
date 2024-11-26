@@ -1,7 +1,7 @@
 #Galilea Peralta Contreras.
 #25 de noviembre del 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python
+#Este programa implementa una calculadora básica con un menú para realizar operaciones matemáticas básicas.
 
 
 def Menu():

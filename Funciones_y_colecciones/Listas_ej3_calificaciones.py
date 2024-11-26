@@ -1,7 +1,7 @@
 #Galilea Peralta Contreras.
 #13 de noviembre del 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python
+#Este programa gestiona las calificaciones de los alumnos del Parcial 1.
 """
 Escribe un programa de nombre Listas_ej3_calificaciones.py que realice lo siguiente:
 Este programa es una lista de las calificaciones de los alumnos del Parcial 1. La lista está conformada por el nombre del alumno y sus calificaciones.
@@ -23,6 +23,7 @@ a) Se sugiere utilizar funciones para modular el código.
 b) Se sugiere utilizar listas para las cinco calificaciones, los nombres y las calificaciones de los alumnos.
 c) Todas las calificaciones y promedios se deben mostrar únicamente con un decimal.
 """
+#Función para mostrar el menú y devolver la opción seleccionada por el usuario.
 def Menu():
     print("*** Promedios del parcial 1. **+")
     print()
@@ -43,17 +44,19 @@ Contabilidad = []
 Algebra = []
 Electronica = []
 Ingles = []
+#Lista que agrupa las materias.
 Calificaciones = [Estructura_de_datos, Derecho, Contabilidad, Algebra, Electronica,Ingles]
 Posicion = 0
+#Variable para controlar el bucle principal.
 Opcion = None
 
 while Opcion != 0:
     Opcion = Menu()
-    if Opcion  == 0:
+    if Opcion  == 0: #Salir del programa.
         print("Fin de programa.")
-    elif Opcion  == 1:
+    elif Opcion  == 1: #Ver calificaciones de un alumno específico.
         print()
-        if len(Estructura_de_datos) != 0:
+        if len(Estructura_de_datos) != 0: #Verifica si hay alumnos registrados.
              Numero_de_alumno = int(input("Ingrese el numero del alumno que deseas ver: "))
              print("Calificacion del alumno ",Numero_de_alumno)
              print(f" Estructura de datos: {Estructura_de_datos[Numero_de_alumno]: .1f}.")
@@ -64,7 +67,7 @@ while Opcion != 0:
              print()
         else:
             print("No hay alumnos por ver.")
-    elif Opcion == 2:
+    elif Opcion == 2: #Ver calificaciones de todos los alumnos.
         print()
         if len(Estructura_de_datos) != 0:
             for Calificacion in Calificaciones:
@@ -72,7 +75,7 @@ while Opcion != 0:
         else:
             print("No hay alumnos por ver.")
         print()
-    elif Opcion == 3:
+    elif Opcion == 3:  #Ver promedios de todos los alumnos.
         if len(Estructura_de_datos) != 0:
             # Con una materia ya se sabe cuantos alumnos hay
             Numero_de_alumnos = len(Estructura_de_datos)
@@ -89,7 +92,7 @@ while Opcion != 0:
             print("No hay alumnos.")
 
 
-    elif Opcion  == 4:
+    elif Opcion  == 4: #Agregar alumno y sus calificaciones.
         print()
         print("Ingrese las calificaciones del alumno")
         Estructura_añadido = float(input("Estructuras de datos: "))
@@ -107,7 +110,7 @@ while Opcion != 0:
         Calificaciones[5].append(Ingles_añadido)
 
         print()
-    elif Opcion  == 5:
+    elif Opcion  == 5:  #Eliminar un alumno.
         Eliminar_de_alumno = int(input("Ingrese el numero del alumno que deseas eliminar: "))
         del Estructura_de_datos[Eliminar_de_alumno]
         del Derecho[Eliminar_de_alumno]
@@ -116,7 +119,7 @@ while Opcion != 0:
         del Electronica [Eliminar_de_alumno]
         del Ingles[Eliminar_de_alumno]
 
-    elif Opcion == 6:
+    elif Opcion == 6:  #Ver promedio grupal.
         if len(Estructura_de_datos) != 0:
             #Con una materia ya se sabe cuantos alumnos hay
             Numero_de_alumnos = len(Estructura_de_datos)
@@ -134,7 +137,7 @@ while Opcion != 0:
             print()
             print("No hay alumnos que promediar.")
         print()
-    else:
+    else: #Opción no válida.
         print()
         print("Opción incorrecta.")
         print()
