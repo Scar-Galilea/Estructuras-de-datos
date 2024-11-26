@@ -1,7 +1,7 @@
 #Galilea Peralta Contreras.
 #29 de octubre de 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python.
+#Este programa implementa una calculadora básica con un menú para realizar operaciones matemáticas básicas.
 """
 Escribe un programa de nombre Ciclos_ej3_calculadora.py que realice lo siguiente:
 Este programa es una calculadora básica que contenga el siguiente menú:
@@ -21,9 +21,13 @@ c) Calcule el resultado de acuerdo a la opción.
 d) Muestre el resultado en pantalla.
 e) Repita el menú anterior.
 """
+#Inicializar variable para controlar el bucle.
 Opcion = None
+
+#Ciclo principal del programa.
 while Opcion != 0:
-    print("*** Calculadora básica. **+")
+    #Mostrar el menú al usuario.
+    print("*** Calculadora básica. ***")
     print("0) Salir.")
     print("1) Suma.")
     print("2) Resta.")
@@ -32,18 +36,25 @@ while Opcion != 0:
     print("5) División entera.")
     print("6) Exponenciación.")
     print()
+
+    #Solicitar la opción al usuario.
     Opcion = int(input("Ingresa una opción: "))
 
+    #Caso: Salir del programa.
     if Opcion == 0:
         print()
         print("Fin del programa.")
+
+    #Caso: Suma.
     elif Opcion == 1:
         print()
         print("Suma:")
         Variable_2 = float(input("Ingrese un número: "))
         Variable_3 = float(input("Ingrese otro número: "))
         print()
-        print(f"La suma entre el {Variable_2} y el {Variable_3} es {Variable_2 + Variable_3}.")
+        print(f"La suma entre el {Variable_2} y el {Variable_3} es: {Variable_2 + Variable_3}.")
+
+    #Caso: Resta.
     elif Opcion == 2:
         print()
         print("Resta:")
@@ -51,6 +62,8 @@ while Opcion != 0:
         Variable_3 = float(input("Ingrese otro número: "))
         print()
         print(f"La resta entre el {Variable_2} y el {Variable_3} es: {Variable_2 - Variable_3}.")
+
+    #Caso: Multiplicación.
     elif Opcion == 3:
         print()
         print("Multiplicación:")
@@ -58,6 +71,8 @@ while Opcion != 0:
         Variable_3 = float(input("Ingrese otro número: "))
         print()
         print(f"La multiplicación entre el {Variable_2} y el {Variable_3} es: {Variable_2 * Variable_3}.")
+
+    #Caso: División.
     elif Opcion == 4:
         print()
         print("División:")
@@ -65,24 +80,29 @@ while Opcion != 0:
         Variable_3 = float(input("Ingrese otro número: "))
         print()
         print(f"La división entre el {Variable_2} y el {Variable_3} es: {Variable_2 / Variable_3}.")
+
+    #Caso: División entera.
     elif Opcion == 5:
         print()
         print("División entera:")
         Variable_2 = float(input("Ingrese un número: "))
         Variable_3 = float(input("Ingrese otro número: "))
         print()
-        print(f"La división entre el {Variable_2} y el {Variable_3} es: {Variable_2 // Variable_3}.")
+        print(f"La división entera entre el {Variable_2} y el {Variable_3} es: {Variable_2 // Variable_3}.")
+
+    #Caso: Exponenciación.
     elif Opcion == 6:
         print()
-        print("Exponenciacion:")
+        print("Exponenciación:")
         Variable_2 = float(input("Ingrese un número: "))
         Variable_3 = float(input("Ingrese otro número: "))
         print()
-        print(f"La exponenciacion entre el {Variable_2} y el {Variable_3} es: {Variable_2 ** Variable_3}.")
+        print(f"La exponenciación entre el {Variable_2} y el {Variable_3} es: {Variable_2 ** Variable_3}.")
+
+    #Caso: Opción no válida.
     else:
         print()
         print("Opción incorrecta.")
         print()
-
 
 
