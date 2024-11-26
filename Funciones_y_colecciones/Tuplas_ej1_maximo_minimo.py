@@ -30,17 +30,18 @@ def Menu():
 
 def Maximos_y_minimos(Tupla_de_numeros):
     contador = 1
-    Tupla_de_maximo_y_minimo = (Tupla_de_numeros[0],Tupla_de_numeros[0])
     Numero_de_elementos = len(Tupla_de_numeros)
+    Tupla_de_maximo_y_minimo = ()
+    Maximo,Minimo = Tupla_de_numeros[0],Tupla_de_numeros[0]
     while contador < Numero_de_elementos:
-        if Tupla_de_numeros[contador] > Numero_maximo:
-            Tupla_de_maximo_y_minimo[0] = Tupla_de_numeros[contador]
+        if Tupla_de_numeros[contador] > Maximo:
+            Maximo = Tupla_de_numeros[contador]
         else:
-            if Tupla_de_numeros[contador] < Numero_minimo:
-                Tupla_de_maximo_y_minimo[1] = Tupla_de_numeros[contador]
+            if Tupla_de_numeros[contador] < Minimo:
+                Minimo = Tupla_de_numeros[contador]
         contador += 1
-
-    return Tupla_de_maximo_y_minimo = (Tupla_de_numeros[0],Tupla_de_numeros[0])
+    Tupla_de_maximo_y_minimo = Maximo,Minimo
+    return Tupla_de_maximo_y_minimo
 
 
 Opcion = None
