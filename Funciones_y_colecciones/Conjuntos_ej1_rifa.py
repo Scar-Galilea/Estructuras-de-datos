@@ -47,33 +47,41 @@ while Opcion != 0:
     elif Opcion == 1:
         print()
         if len(Conjunto_de_correos) != 0:
-
+            print("El conjunto de correos electronicos es:")
+            for Correo_electronico in Conjunto_de_correos :
+                print(f"-{Correo_electronico}")
         else:
-            print("No hay correos por ver")
-        print("______________________________________________________")
+            print("No hay participantes por mostrar.")
 
     elif Opcion  == 2:
         print()
-        Correo_electronico_a_añadir = input("Ingrese el correo electronico: ")
+        Correo_electronico_a_añadir = input("Ingrese el correo electronico del participante a agregar: ")
         Conjunto_de_correos.add(Correo_electronico_a_añadir)
-        print("¡El correo wlwctronico se añadio con exito!")
-        print("______________________________________________________")
-        print()
+        print(f"¡El correo electronico {Correo_electronico_a_añadir} se añadio con exito!")
     elif Opcion == 3:
         print()
         if len(Conjunto_de_correos) != 0:
+            print()
+            for Correo_electronico in Conjunto_de_correos :
+                print(f"-{Correo_electronico}")
+            print()
+            Correo_electronico_a_eliminar =input("Ingrese el correo electronico del participante a eliminar: ")
+            Conjunto_de_correos.remove(Correo_electronico_a_eliminar)
+            print(f"¡El correo electronico se elimino con exito!")
         else:
-            print("No hay correos por ver")
-        print("______________________________________________________")
-
+            print("No hay participantes por eliminar.")
     elif Opcion  == 4:
         print()
         if len(Conjunto_de_correos) != 0:
-
+            print()
+            Lista_de_correos = list(Conjunto_de_correos)
+            Ganador = random.choice(Lista_de_correos)
+            print(f"El correo ganador es {Ganador}")
+            print("¡Muchas felicidades!")
         else:
-            print("No hay correos por ver")
-        print("______________________________________________________")
+            print("No hay correos por seleccionar.")
     else:
         print()
         print("Opción incorrecta.")
-        print()
+    print("______________________________________________________")
+    print()
