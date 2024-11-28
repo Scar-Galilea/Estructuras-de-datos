@@ -19,6 +19,7 @@ Para ello:
 a) Utilice un conjunto para almacenar los correos de los participantes.
 b) Utilice un valor aleatorio utilizando la función random.choice(lista). Notar que hay que convertir primero a una lista.
 """
+from random import random, choice
 
 
 #Función para mostrar el menú y devolver la opción seleccionada.
@@ -61,7 +62,6 @@ while Opcion != 0:
     elif Opcion == 3:
         print()
         if len(Conjunto_de_correos) != 0:
-            print()
             for Correo_electronico in Conjunto_de_correos :
                 print(f"-{Correo_electronico}")
             print()
@@ -75,7 +75,7 @@ while Opcion != 0:
         if len(Conjunto_de_correos) != 0:
             print()
             Lista_de_correos = list(Conjunto_de_correos)
-            Ganador = random.choice(Lista_de_correos)
+            Ganador = choice(Lista_de_correos)
             print(f"El correo ganador es {Ganador}")
             print("¡Muchas felicidades!")
         else:

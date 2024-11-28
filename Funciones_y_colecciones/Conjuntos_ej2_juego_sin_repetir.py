@@ -18,46 +18,23 @@ c) Al final, se deben mostrar todas las palabras ingresadas.
 
 Conjuntos_de_palabras = set()
 Conjuntos_de_repetidos = set()
+
 Tema = None
+Contador = 1
 
-def Menu():
-    print("***  Juego sin repetir  ***")
-    print()
-    print("0) Salir.")
-    print("1) Ver correos de participantes.")
-    print("2) Agregar correo de participante.")
-    print("3) Eliminar correo de participante.")
-    print("4) Seleccionar ganador.")
-    print()
+print("Este es un juego que se puede jugar de manera grupal, en donde")
+print("el objetivo es decir palabras de un tema en específico y ")
+print("los jugadores deben tratar de no repetir la misma palabra.")
+print()
 
-    Opcion = int(input("Ingrese la opción: "))
-    return Opcion
+Tema = input("Ingresa el tema del juego: ")
 
+while len(Conjuntos_de_repetidos) == 0:
+    Palabras = input(f"Ingresa la palabra {Contador} del tema de {Tema}: ")
+    Conjuntos_de_palabras.add(Palabras)
+    Palabras_sin_repeticiones = Conjuntos_de_palabras
+    Conjuntos_de_repetidos = Conjuntos_de_palabras - Palabras_sin_repeticiones
+    Contador += 1
 
-Conjunto_de_correos = set()
-Opcion = None
-
-while Opcion != 0:
-    Opcion = Menu()
-    if Opcion == 0:
-        print()
-        print("Fin del programa.")
-    elif Opcion == 1:
-        print()
-        if len(Conjunto_de_correos) != 0:
-            print("El conjunto de correos electronicos es:")
-            for Correo_electronico in Conjunto_de_correos :
-                print(f"-{Correo_electronico}")
-        else:
-            print("No hay participantes por mostrar.")
-
-    elif Opcion  == 2:
-        print()
-        Correo_electronico_a_añadir = input("Ingrese el correo electronico del participante a agregar: ")
-        Conjunto_de_correos.add(Correo_electronico_a_añadir)
-        print(f"¡El correo electronico {Correo_electronico_a_añadir} se añadio con exito!")
-    else:
-        print()
-        print("Opción incorrecta.")
-    print("______________________________________________________")
-    print()
+print(f"!El juego ha terminado! Has dicho {Contador-1} palabras diferentes.")
+print(f"Las palabras del tema {Tema} fueron: {Conjuntos_de_palabras}")
