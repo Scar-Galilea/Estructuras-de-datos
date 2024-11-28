@@ -35,7 +35,7 @@ def Menu():
 
 # Lista para almacenar las coordenadas como tuplas (x, y)
 Lista_de_cordenadas = []
-Opcion =n= None
+Opcion = None
 
 while Opcion != 0:
     Opcion = Menu()
