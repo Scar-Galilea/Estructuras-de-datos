@@ -17,10 +17,10 @@ c) Al final, se deben mostrar todas las palabras ingresadas.
 """
 
 Conjuntos_de_palabras = set()
-Conjuntos_de_repetidos = set()
+repetidos = 0
 
 Tema = None
-Contador = 1
+Contador = 0
 
 print("Este es un juego que se puede jugar de manera grupal, en donde")
 print("el objetivo es decir palabras de un tema en específico y ")
@@ -29,11 +29,14 @@ print()
 
 Tema = input("Ingresa el tema del juego: ")
 
-while len(Conjuntos_de_repetidos) == 0:
+while repetidos == 0:
     Palabras = input(f"Ingresa la palabra {Contador} del tema de {Tema}: ")
+    Palabras = Palabras.lower()
+    for Conjunto_de_palabra in Conjuntos_de_palabras:
+        if Conjunto_de_palabra == Palabras:
+            repetidos = 1
+
     Conjuntos_de_palabras.add(Palabras)
-    Palabras_sin_repeticiones = Conjuntos_de_palabras
-    Conjuntos_de_repetidos = Conjuntos_de_palabras - Palabras_sin_repeticiones
     Contador += 1
 
 print(f"!El juego ha terminado! Has dicho {Contador-1} palabras diferentes.")
