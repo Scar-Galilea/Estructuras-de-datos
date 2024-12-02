@@ -14,7 +14,7 @@ Se utilizan llaves {} para definir un diccionario. Cada par clave-valor se separ
 nombre_diccionario ={clave1: valor1, clave2: valor2, clave3: valor3, ...}
 
 """
-
+"""
 # Se crean dos diccionarios y se imprimen.
 print("          ********  Ejemplos de uso de diccionarios  ********")
 
@@ -88,7 +88,7 @@ for clave in diccionario_profesor.keys():           # Devuelve únicamente las c
     print(f"Clave: {clave}")
 print()
 
-"""TEMAS UN POCO MÁS AVANZADOS."""
+TEMAS UN POCO MÁS AVANZADOS.
 # Uso de tuplas para guardar la clave.
 print("Uso de tuplas para guardar la clave.")
 
@@ -133,3 +133,68 @@ print("No. de alumnos de cada grupo:")
 print(f"Grupo 303: {diccionario_informatica['grupo 303']['no_alumnos']}")
 print(f"Grupo 503: {diccionario_informatica['grupo 503']['no_alumnos']}")
 print(f"Grupo 903: {diccionario_informatica['grupo 903']['no_alumnos']}")
+"""
+
+Diccionario_alumno = {}
+
+print(f"{Diccionario_alumno}")
+#Se añaden elementos
+
+Diccionario_alumno['Nombre'] = "Galilea"
+Diccionario_alumno['Prmer_apellido'] = "Peralta"
+
+print(Diccionario_alumno)
+print()
+
+print(Diccionario_alumno.get('Nombre'))
+print(Diccionario_alumno['Prmer_apellido'])
+
+Diccionario_alumno['Nombre'] = "Scarlett"
+print(Diccionario_alumno)
+
+Diccionario_alumno['Grupo'] = 403
+print(Diccionario_alumno)
+
+#Eliminar
+del Diccionario_alumno['Prmer_apellido']
+print(Diccionario_alumno)
+Diccionario_alumno.pop('Grupo')
+print(Diccionario_alumno)
+
+Diccionario_alumno['Prmer_apellido'] = "Peralta"
+#Se accede al par clave_valor
+
+for clave,valor in Diccionario_alumno.items():
+    print(clave,valor)
+
+#Combinación con tuplas
+
+Diccionario_egresado = { 'Nombre': "Diego",
+                         ('Primer_apellido', 'Segundo_apellido') : "Ocaña Martínez",
+                         'edad': 25 }
+print(Diccionario_egresado)
+
+Diccionario_informatica = {
+    'Grupo 303':{'No_alumnos' : 12,
+                 'No_materias': 5,
+                 'Promedio_grupal' : 7.99},
+    'Grupo 503':{'No_alumnos' : 7,
+                 'No_materias': 5,
+                 'Promedio_grupal' : 6},
+    'Grupo 903':{'No_alumnos' : 5,
+                 'No_materias': 5,
+                 'Promedio_grupal' : 8}
+}
+
+print(Diccionario_informatica)
+
+for grupo in enumerate(Diccionario_informatica):
+    print(f"Grupo: {grupo}")
+
+Promedio_303 = Diccionario_informatica['Grupo 303']['Promedio_grupal']
+Promedio_503 = Diccionario_informatica['Grupo 503']['Promedio_grupal']
+Promedio_903 = Diccionario_informatica['Grupo 903']['Promedio_grupal']
+print(Promedio_303)
+print(Promedio_503)
+print(Promedio_903)
+
