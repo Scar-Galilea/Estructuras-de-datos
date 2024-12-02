@@ -27,6 +27,11 @@ f) Repita nuevamente el menú hasta salir.
 
 from random import random, randint
 
+PIEDRA = "Piedra"
+PAPEL = "Papel"
+
+
+
 def Menu():
     print("*** Juego de piedra, papel o tijera. **+")
     print(f"Victorias del jugador: {Victorias_del_jugador}, empates: {Empates} y victorias del CPU: {Victorias_del_CPU}  ")
