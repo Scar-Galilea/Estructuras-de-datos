@@ -1,11 +1,10 @@
 #Galilea Peralta Contreras.
 #02 de diciembre del 2024.
 #Descripción:
-#Usos de los tipos básico de datos en Python.
+#Este programa es una versión del juego "Piedra, papel o tijeras" que utiliza un diccionario.
+#Permite registrar las victorias del jugador, los empates y las victorias del CPU.
 
 """
-
-
 Escribe un programa de nombre Diccionarios_ej1_piedra_papel_tijera.py que realice lo siguiente:
 Este programa es una nueva versión del juego realizado de piedra, papel y tijeras, pero utilizando un diccionario para las reglas del juego.
 El juego mostrará las victorias del jugador, los partidos empatados y las victorias del CPU. Se debe mostrar el siguiente menú:
@@ -24,76 +23,89 @@ d) Muestre la elección del jugador y la del cpu.
 e) Muestre la cantidad de victorias, empates y derrotas.
 f) Repita nuevamente el menú hasta salir.
 """
+from random import random, choice #Importamos choice para la selección aleatoria de la CPU.
 
-from random import random, randint
+#Constantes para las opciones del juego y los resultados.
+PIEDRA = "Piedra."
+PAPEL = "Papel."
+TIJERA = "Tijera."
+JUGADOR = "Gana el jugador."
+EMPATE = "Empate."
+CPU = "Gana la CPU."
 
-PIEDRA = "Piedra"
-PAPEL = "Papel"
-
-
-
+#Función que muestra el menú y devuelve la opción seleccionada por el jugador.
 def Menu():
-    print("*** Juego de piedra, papel o tijera. **+")
+    print("  ***  Juego de piedra, papel o tijeras  ***")
     print(f"Victorias del jugador: {Victorias_del_jugador}, empates: {Empates} y victorias del CPU: {Victorias_del_CPU}  ")
     print("     1) Piedra.")
     print("     2) Papel.")
     print("     3) Tijera.")
-    print("     0) Salir")
+    print("     0) Salir.")
     print()
     Opcion = int(input("Ingresa una opción: "))
     return Opcion
 
-def Eleccion(Opcion_del_jugador,Opcion_del_CPU):
-    Opciones = []
+#Función que realiza la elección del jugador y la del CPU.
+def Eleccion(Opcion_del_jugador):
+    Lista = []
+    #Asigna la opción del jugador según la entrada seleccionada.
     if Opcion_del_jugador == 1:
-        Jugador = "Piedra"
+        Jugador = PIEDRA
     elif Opcion_del_jugador == 2:
-        Jugador = "Papel"
+        Jugador = PAPEL
     elif Opcion_del_jugador == 3:
-        Jugador = "Tijera"
-    Opciones = (Jugador)
-    return Opciones
+        Jugador = TIJERA
+    else:
+        Jugador = None
 
+    Lista.append(PIEDRA)
+    Lista.append(PAPEL)
+    Lista.append(TIJERA)
 
-Opcion_del_jugador = None
-Victorias_del_jugador = 0
-Empates = 0
-Victorias_del_CPU = 0
+    #CPU elige aleatoriamente entre las opciones.
+    Opcion_del_CPU = choice(Lista)
+    return Jugador,Opcion_del_CPU
 
-while Opcion_del_jugador != 0:
-    Opcion_del_jugador = Menu()
-    Opcion_del_CPU = randint(1, 3)  #La CPU elige aleatoriamente entre 1, 2 y 3.
+#Inicialización de variables del programa.
+Opcion = None #Opción del menú seleccionada por el jugador.
+Victorias_del_jugador = 0 #Contador de victorias del jugador.
+Empates = 0 #Contador de empates.
+Victorias_del_CPU = 0  #Contador de victorias del CPU.
 
-    Jugador, CPU = Eleccion(Opcion_del_jugador,Opcion_del_CPU)
+#Diccionario que define las reglas del juego.
+Piedra_papel_tijera = {(PIEDRA, TIJERA): JUGADOR,
+                       (PIEDRA, PAPEL): CPU,
+                       (TIJERA, PAPEL): JUGADOR,
+                       (TIJERA, PIEDRA): CPU,
+                       (PAPEL, PIEDRA): JUGADOR,
+                       (PAPEL, TIJERA): CPU,
+                       }
+#Ciclo principal del juego.
+while Opcion != 0: #El juego continúa mientras el jugador no elija salir.
+    Opcion = Menu() #Muestra el menú y obtiene la opción del jugador.
 
-    Jugador = Opcion_del_jugador
-    #Comprobación de condiciones para jugar o salir.
-    if Opcion_del_jugador != 0:
-        # Si ambos eligen lo mismo, es empate.
-        if (Opcion_del_jugador == 1 and Opcion_del_CPU == 1) or (Opcion_del_jugador == 2 and Opcion_del_CPU == 2) or (Opcion_del_jugador == 3 and Opcion_del_CPU == 3):
-            print()
-            Empates += 1
-            print(f"Jugador: {Jugador}. CPU: {CPU}. El resultado es empate.")
-            print("------------------------------------")
-            print()
+    Opcion_del_Jugador, Opcion_del_CPU = Eleccion(Opcion)   #Obtiene la elección del jugador y del CPU.
 
-        elif (Opcion_del_jugador == 1 and Opcion_del_CPU == 2) or (Opcion_del_jugador == 2 and Opcion_del_CPU == 3) or (Opcion_del_jugador == 3 and Opcion_del_CPU == 1):
-            print()
-            print(f"Jugador: {Jugador}. CPU: {CPU}. El ganador es el CPU.")
-            Victorias_del_CPU += 1
-            print("------------------------------------")
-            print()
-        elif (Opcion_del_jugador == 1 and Opcion_del_CPU == 3) or (Opcion_del_jugador == 2 and Opcion_del_CPU == 1) or (Opcion_del_jugador == 3 and Opcion_del_CPU == 2):
-            print()
-            print(f"Jugador: {Jugador}. CPU: {CPU}. El ganador es el jugador.")
-            Victorias_del_jugador += 1
-            print("------------------------------------")
-            print()
+    #Determina el resultado del juego usando el diccionario.
+    Resultado = Piedra_papel_tijera.get((Opcion_del_Jugador, Opcion_del_CPU), EMPATE)
 
-        else:
-            print()
-            print("Opción inválida")
-            print("-----------------------------------")
-            print()
-print()
-print("Salio del programa")
+    if Opcion == 0: #Salir del programa.
+        print()
+        print("Fin del programa.")
+
+    #Actualiza los contadores y muestra el resultado.
+    elif Resultado == JUGADOR:
+        Victorias_del_jugador += 1
+        print(f"Jugador: {Opcion_del_Jugador} CPU: {Opcion_del_CPU} {JUGADOR}")
+    elif Resultado == CPU:
+        Victorias_del_CPU += 1
+        print(f"Jugador: {Opcion_del_Jugador} CPU: {Opcion_del_CPU} {CPU}")
+    elif Resultado == EMPATE:
+        Empates += 1
+        print(f"Jugador: {Opcion_del_Jugador} CPU: {Opcion_del_CPU} {EMPATE}")
+    else:
+        print()
+        print("Opción incorrecta.") #Mensaje para opciones no válidas.
+
+    print("______________________________________________________")
+    print()
