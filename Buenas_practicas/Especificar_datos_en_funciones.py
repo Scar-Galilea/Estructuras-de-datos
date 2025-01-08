@@ -39,8 +39,3 @@ while opcion != 0:
             print(f"el resultado final es {num_cadena}")
 
 print("Salio del programa")
-
-
-
-
-
