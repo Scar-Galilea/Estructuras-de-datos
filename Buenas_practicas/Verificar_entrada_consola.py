@@ -1,5 +1,5 @@
 #Galilea Peralta Contreras.
-#07 de octubre de 2024.
+#07 de enero de 2025.
 #Descripción:
 #Este programa calcula la suma acumulativa desde 0 hasta un número ingresado por el usuario.
 
