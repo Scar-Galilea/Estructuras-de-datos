@@ -9,7 +9,7 @@
 #Mutable es que cambia
 
 #Crear lista
-"""
+
 Alumnos = []
 Alumnos.append("Hector")
 Alumnos.append("Addi")
@@ -21,6 +21,7 @@ print(Alumnos[1])
 
 print()
 Alumnos.insert(1,"Tania")
+print(Alumnos)
 print(Alumnos[1])
 print()
 for Alumno in Alumnos:
@@ -35,7 +36,7 @@ print(Alumnos)
 del Alumnos[2]
 print(Alumnos)
 
-"""
+
 
 Grupo = []
 Grupo.append("Rebeca")

@@ -1,41 +1,51 @@
 #Galilea Peralta Contreras.
-#08 de enero de 2025.
+#07 de octubre de 2024.
 #Descripción:
 #Este programa calcula la suma acumulativa desde 0 hasta un número ingresado por el usuario.
-
-#TODO imprementar menú
-def menu():
-    pass
-
-def cadena_a_entero(cadena: str) -> int | None:
+"""
+prueba_numero = int(input("Ingresa n: "))
+print()
+cadena = input ("Ingresa cadena: ").strip()
+print(cadena.isnumeric())
+print(cadena.isalpha())
+print(cadena.isalnum())
+numero = input("Ingresa n: ")
+print()
+while not numero.isnumeric():
+    print("Opción invalida")
+    numero = input("Intenta nuevamente: ")
+print()
+numero = int(numero)
+print(f"El número {numero} es el tipo { type(numero)}")
+"""
+"""
+def cadena_a_entero(cadena):
     no_guiones = cadena.count("-")
     revisar_cadena = cadena.lstrip("-")
-
     if revisar_cadena.isnumeric() and no_guiones in(0,1) :
         return  int(cadena)
     else:
         return None
-#TODO
-def cadena_a_flotante(cadena):
-    def cadena_a_flotante(cadena):
-        no_puntos = cadena.count(".")
-        no_guiones = cadena.count("-")
-        revisar_cadena = cadena.lstrip("-").replace(".", "")
-
-        if revisar_cadena.isnumeric() and no_guiones in (0, 1) and no_puntos in (0, 1):
-            return float(cadena)
-        else:
-            return None
-opcion = menu()
-while opcion != 0:
-    if opcion == 1:
-        num_cadena = input("Ingresa un número a converir: ")
-        num_cadena = cadena_a_entero(num_cadena)
-        print(f"el resultado final es {num_cadena}")
+num_cadena = input("Ingresa Z: ")
+numero = cadena_a_entero(num_cadena)
+while numero is None:
+    print("Opcion invalida")
+    num_cadena = input("Intenta nuevamente: ")
+    numero = cadena_a_entero(num_cadena)
+print(f"El número {numero} es tipo {type(numero)}")
+"""
+def cadena_a_flotante (cadena):
+    no_puntos = cadena.count(".")
+    no_guiones = cadena.count("-")
+    revisar_cadena = cadena.lstrip("-").replace(".","")
+    if revisar_cadena.isnumeric() and no_guiones in(0,1) and no_puntos in(0,1) :
+        return  float(cadena)
     else:
-        if opcion == 2:
-            num_cadena = input("Ingresa un número a converir: ")
-            num_cadena = cadena_a_flotante(num_cadena)
-            print(f"el resultado final es {num_cadena}")
-
-print("Salio del programa")
+        return None
+num_cadena = input("Ingresa Z: ")
+numero = cadena_a_flotante(num_cadena)
+while numero is None:
+    print("Opcion invalida")
+    num_cadena = input("Intenta nuevamente: ")
+    numero = cadena_a_flotante(num_cadena)
+print(f"El número {numero} es tipo {type(numero)}")
