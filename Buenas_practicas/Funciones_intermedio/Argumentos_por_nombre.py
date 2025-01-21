@@ -1,3 +1,7 @@
+#Galilea Peralta Contreras.
+#08 de enero de 2025.
+#Descripción:
+#Este programa calcula la suma acumulativa desde 0 hasta un número ingresado por el usuario.
 
 
 def imprimir_alumno(nombre:str="hola",edad:int=64,matricula:int=6464646,grupo:int=303,*,semestre:int = 3) -> None:
