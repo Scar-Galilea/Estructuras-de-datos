@@ -27,7 +27,7 @@ def funcion_recursiva_potenciacion(a: int ,b: int) -> int:
         return 0
     # Caso recursivo: a^b = a * a^(b-1).
     else:
-         return a * funcion_recursiva_potenciacion(a^(b-1))
+         return a * funcion_recursiva_potenciacion(a,(b-1))
 
 
 
