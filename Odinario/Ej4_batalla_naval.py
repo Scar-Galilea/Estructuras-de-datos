@@ -37,7 +37,7 @@ def menu() -> int:
 
     print("0) Salir.")
     print("1) Jugar.")
-    print("2) instrucciones.")
+    print("2) Instrucciones.")
     opcion = input("Ingrese la opcion: ")
     opcion = verificar(opcion) # Convierte la opción a número entero y verifica validez.
 
@@ -216,7 +216,7 @@ def main() -> None:
                 contador += 1
             print()
             print("Comienza el juego.")
-            while detener != 0:
+            while detener != 0  and (contador_del_jugador_1 < num_de_barcos or contador_del_jugador_1 < num_de_barcos ) :
                 while bandera != 0 and contador_del_jugador_1 < num_de_barcos:
                     print("Turno del jugador 1")
                     fila = input("Fila: ")
@@ -254,6 +254,7 @@ def main() -> None:
                 detener,bandera = ganador(tablero_2,1) # Verifica si el jugador 1 ha ganado.
 
                 while bandera != 0 and contador_del_jugador_2 < num_de_barcos:
+
                     print("Turno del jugador 2")
                     fila = input("Fila: ")
                     fila = verificar(fila)
@@ -276,7 +277,7 @@ def main() -> None:
                         print("___________________________________________________________________")
                         mostrar_barcos(indice)
                         tablero_1[indice] = "~"
-                        bandera = None
+                        bandera = 1
                         contador_del_jugador_2 += 1
                         print()
                     else:
@@ -284,7 +285,7 @@ def main() -> None:
                         print("___________________________________________________________________")
                         bandera = 0 # Finaliza el turno del jugador 2.
                         print()
-                detener, bandera = ganador(tablero_1, 2) # Verifica si el jugador 2 ha ganado.
+                detener, bandera = ganador(tablero_1, 2)  # Verifica si el jugador 2 ha ganado.
                 print()
 
 
@@ -302,5 +303,3 @@ def main() -> None:
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ == '__main__':
     main()
-
-
