@@ -3,7 +3,9 @@ Nombre: Galilea Peralta Contreras.
 Fecha: 10 de febrero del 2025.
 Descripción: Juego de Batalla Naval en consola donde dos jugadores colocan sus barcos y se turnan para atacar posiciones en el tablero del oponente.
 """
-
+ROJO = "\033[91m"
+AZUL = "\033[94m"
+RESET = "\033[0m"
 TOCADO = "Tocado"
 AGUA = "Agua"
 
@@ -13,7 +15,25 @@ def menu() -> int:
     Muestra el menú principal y obtiene la opción del usuario.
     :return: Un número entero que representa la opción seleccionada.
     """
-    print("******** Batalla naval. ********")
+    batalla = """
+    BBBBB   AAAAA  TTTTT  AAAAA  L      L       AAAAA
+    B    B A     A   T   A     A L      L      A     A
+    BBBBB  AAAAAAA   T   AAAAAAA L      L      AAAAAAA
+    B    B A     A   T   A     A L      L      A     A
+    BBBBB  A     A   T   A     A LLLLL  LLLLL  A     A
+    """
+
+    naval = """
+    N     N   AAAAA  V     V   AAAAA  L            
+    NN    N  A     A  V     V  A     A L                 
+    N N   N  AAAAAAA  V     V  AAAAAAA L            
+    N  N  N  A     A   V   V   A     A L                 
+    N   N N  A     A    VVV    A     A LLLLL       
+    """
+
+    # Imprimir el texto con colores
+    print(ROJO + batalla + RESET)
+    print(AZUL + naval + RESET)
 
     print("0) Salir.")
     print("1) Jugar.")
