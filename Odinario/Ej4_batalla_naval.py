@@ -268,8 +268,6 @@ def main() -> None:
                 print()
 
 
-
-
         else:
             print("La batalla naval es un emocionante juego de estrategia y deducción que simula un combate naval entre dos jugadores. ")
             print("Cada jugador despliega secretamente su flota de barcos en un tablero cuadriculado que representa el océano.")
@@ -279,12 +277,6 @@ def main() -> None:
             print("Si el disparo toca un barco, el jugador que dispara tiene derecho a seguir disparando hasta fallar. El objetivo es acertar ")
             print("todas las casillas que ocupa un barco para hundirlo por completo.")
         print("_________________________________________________________________________________________________________________________________")
-
-
-
-
-
-
 
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
